@@ -1,0 +1,4 @@
+env/
+virt/
+guides.txt
+__pycache__/
