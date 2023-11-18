@@ -1,3 +1,5 @@
+import os 
+
 from flask import Flask, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from flask_admin import Admin 
@@ -8,7 +10,7 @@ from config import config_options
 db = SQLAlchemy()
 admin = Admin()
 
-def create_app(config_name='development'):
+def create_app(config_name=os.environ.get('CONFIG_NAME')):
     app = Flask(__name__)
 
     # app.config['SQLALCHEMY_DATABASE_URI']='postgresql://salesdb:salespwd@localhost:5432/salesdb'
