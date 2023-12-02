@@ -10,3 +10,6 @@ root.register_blueprint(user)
 root.register_blueprint(product)
 root.register_blueprint(errors)
 
+@root.route('/mpesa')
+def mpesa():
+  return {'status':'ok'}
